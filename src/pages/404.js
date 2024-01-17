@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import Layout from "../components/layout"
 
 //i dev mode overridas denna sida av en inbyggd 404-sida
