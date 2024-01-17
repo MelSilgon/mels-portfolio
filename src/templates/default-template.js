@@ -1,11 +1,25 @@
-import * as React from "react"
+import React from "react"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import RichTextRender from "../components/richtextRender"
 
 const DefaultTemplate = contentfulPage => {
+  const image = getImage(contentfulPage.image)
+
   return (
-    <main>
-      <h2>{contentfulPage.title}</h2>
-      <p>Default template</p>
-    </main>
+    <div class="home-wrapper">
+      <GatsbyImage
+        image={image}
+        alt={contentfulPage.title}
+        class="hero-image"
+      ></GatsbyImage>
+
+      {/* HERO TEXT CONTENT */}
+      <div class="hero-text">
+        <h3>
+          <RichTextRender richTextNode={contentfulPage.description} />
+        </h3>
+      </div>
+    </div>
   )
 }
 

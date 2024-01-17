@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  top: 0;
+  box-sizing: border-box;
+  min-height: 100%;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover,
+a:active {
+  color: #1a3964;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+img {
+  max-width: 100%;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"] {
+  display: block;
+  min-width: 200px;
+}
+
+input[type="submit"] {
+  display: block;
+}
+
+textarea {
+  min-width: 200px;
+}
+
+/* Richtext*/
+.font-bold {
+  font-weight: bold;
+}
+
+/* Layout*/
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
+
+.navbar-container {
+  background-color: #bbf0df;
+  display: flex;
+  width: 100%;
+  padding: 0.5rem 2rem;
+}
+
+.nav-items {
+  width: 100%;
+}
+
+footer {
+  padding: 1rem;
+  color: aliceblue;
+  background-color: #262929;
+}
+
+.home-wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "heroimage"
+    "herotext";
+}
+
+@media (min-width: 768px) {
+  .home-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "herotext heroimage";
+  }
+}
+
+.hero-image-home {
+  grid-area: heroimage;
+  justify-self: end;
+}
+
+.hero-image {
+  max-height: 500;
+  max-width: 500;
+}
+
+.hero-text {
+  grid-area: herotext;
+  align-self: center;
+}

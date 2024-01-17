@@ -14,10 +14,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby ITHS`,
-    description: `Enkel starter template för ITHS-studenter`,
-    author: `Håkan Gleissman`,
-    siteUrl: `http://dummy-site.com`,
+    title: `Melissa Gonzalez Portfolio`,
+    description: `A portfolio page`,
+    author: `Melissa Gonzalez`,
+    siteUrl: `https://melgon-portfolio.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-image`,
