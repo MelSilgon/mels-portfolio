@@ -12,7 +12,11 @@ const usePortfolioList = () => {
               description
             }
             heroImage {
-              gatsbyImage(width: 200)
+              gatsbyImageData(
+                placeholder: BLURRED
+                layout: CONSTRAINED
+                width: 200
+              )
             }
           }
         }

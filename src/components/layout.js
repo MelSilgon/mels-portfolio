@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
                 return (
                   <Nav.Item key={edge.node.id}>
                     {edge.node.url !== "/404" && (
-                      <Nav.Link as={Link} to={edge.node.url}>
+                      <Nav.Link as={Link} to={edge.node.url} class="nav-item">
                         {edge.node.title}
                       </Nav.Link>
                     )}
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
       </header>
 
       {/* MAIN */}
-      <Container style={{ flex: 1 }}>{children}</Container>
+      <Container style={{ flex: 1, height: "100%" }}>{children}</Container>
 
       {/* FOOTER */}
       <footer>

@@ -3,11 +3,20 @@ import { graphql, useStaticQuery } from "gatsby"
 const useSocials = () => {
   const { allContentfulSocials } = useStaticQuery(graphql`
     query {
-      allContentfulSocials {
+      allContentfulSocials(sort: { order: ASC }) {
         edges {
           node {
             name
-            icon
+            order
+            socialLink
+            image {
+              gatsbyImageData(
+                placeholder: NONE
+                layout: FIXED
+                width: 25
+                quality: 100
+              )
+            }
           }
         }
       }
