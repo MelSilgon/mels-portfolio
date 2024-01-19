@@ -14,12 +14,12 @@ html {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #3d2b8c;
 }
 
 a:hover,
 a:active {
-  color: #030b2a;
+  color: #09022c;
 }
 
 h1,
@@ -77,13 +77,26 @@ textarea {
   padding: 2vh 4vw;
 }
 
+.navbar-brand {
+  font-size: 1.4rem;
+  a {
+    color: #000;
+  }
+}
+
+.nav-link {
+  color: #312664;
+}
+
 .nav-items {
   width: 100%;
 }
 
 .nav-item {
+  color: #312664;
   padding-right: 1rem;
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 footer {
@@ -120,7 +133,7 @@ main {
 }
 
 .hero-image-wrapper {
-  padding-top: 5vh;
+  padding: 4rem;
   grid-area: heroimage;
   justify-self: end;
 }
@@ -128,6 +141,8 @@ main {
 .hero-text {
   grid-area: herotext;
   align-self: center;
+  padding-left: 2vw;
+  padding-bottom: 4vh;
 }
 
 /* about */
@@ -138,7 +153,7 @@ main {
   grid-gap: 5vw;
   grid-template-areas:
     "heroimager"
-    "herotext";
+    "herotextl";
 }
 
 @media (min-width: 768px) {
@@ -159,6 +174,7 @@ main {
 .hero-text-left {
   grid-area: herotextl;
   align-self: center;
+  padding-bottom: 2vh;
 }
 
 .socials-wrapper {

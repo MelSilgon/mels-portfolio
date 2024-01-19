@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Container } from "react-bootstrap"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 
@@ -9,9 +10,17 @@ const PortfolioPost = ({ data }) => {
 
   return (
     <Layout>
-      <h2>{post.title}</h2>
-      <GatsbyImage image={image} alt={post.title}></GatsbyImage>
-      <p>{post.description.description}</p>
+      {/* Single Portfolio Post */}
+      <Container className="px-5">
+        <div class="container-center">
+          <h2>{post.title}</h2>
+          <Container class="post-image-container">
+            <GatsbyImage image={image} alt={post.title}></GatsbyImage>
+          </Container>
+          {/* TODO: Change to richtext */}
+          <p>{post.description.description}</p>
+        </div>
+      </Container>
     </Layout>
   )
 }

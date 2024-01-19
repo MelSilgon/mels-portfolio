@@ -3,22 +3,24 @@ import { Link } from "gatsby"
 import { Navbar, Nav, Container } from "react-bootstrap"
 import "../css/style.css"
 import { Helmet } from "react-helmet"
+//import hooks
 import useNavigation from "../hooks/useNavigation"
 import useSiteMetadata from "../hooks/useSiteMetadata"
 
 const Layout = ({ children }) => {
-  //import use hooks
+  //use hooks
   const navigation = useNavigation()
   const siteMetaData = useSiteMetadata()
 
   return (
     <div class="layout-container">
-      {/* Site's Meta data, goes to HEAD */}
+      {/* Site's Meta data, goes to <HEAD> */}
       <Helmet>
         <title>{siteMetaData.title}</title>
         <meta name="description" content={siteMetaData.description} />
       </Helmet>
 
+      {/* HEADER */}
       <header>
         {/* NAVBAR */}
         <Navbar className="navbar-container" expand="lg">
@@ -45,7 +47,9 @@ const Layout = ({ children }) => {
       </header>
 
       {/* MAIN */}
-      <Container style={{ flex: 1, height: "100%" }}>{children}</Container>
+      <main>
+        <Container style={{ flex: 1, height: "100%" }}>{children}</Container>
+      </main>
 
       {/* FOOTER */}
       <footer>
