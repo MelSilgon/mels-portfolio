@@ -7,6 +7,7 @@ const DefaultTemplate = contentfulPage => {
 
   return (
     <div class="home-wrapper">
+      {/* HERO IMAGE */}
       <div class="hero-image-wrapper">
         <GatsbyImage
           image={image}
@@ -17,9 +18,10 @@ const DefaultTemplate = contentfulPage => {
 
       {/* HERO TEXT CONTENT */}
       <div class="hero-text">
-        <h3>
+        <div>
+          <p>{contentfulPage.title}</p>
           <RichTextRender richTextNode={contentfulPage.description} />
-        </h3>
+        </div>
       </div>
     </div>
   )

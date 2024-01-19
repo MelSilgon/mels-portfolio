@@ -15,7 +15,8 @@ const usePortfolioList = () => {
               gatsbyImageData(
                 placeholder: BLURRED
                 layout: CONSTRAINED
-                width: 200
+                aspectRatio: 1.5
+                cropFocus: TOP
               )
             }
           }

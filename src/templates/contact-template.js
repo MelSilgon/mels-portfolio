@@ -30,6 +30,7 @@ const ContactTemplate = contentfulPage => {
         </ul>
       </div>
       <div class="contact-form-wrapper">
+        {/* CONTACT FORM SECTION */}
         <form
           method="post"
           netlify-honeypot="bot-field"
@@ -47,8 +48,8 @@ const ContactTemplate = contentfulPage => {
             <input type="email" name="email" />
           </label>
           <label>
-            Message:
-            <input type="text" name="message" />
+            <p>Message:</p>
+            <textarea name="message"></textarea>
           </label>
           <input type="button" value="Send" />
         </form>
