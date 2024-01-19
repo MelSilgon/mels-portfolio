@@ -6,7 +6,7 @@ import AboutTemplate from "../templates/about-template"
 import PortfolioTemplate from "../templates/portfolio-template"
 import ContactTemplate from "../templates/contact-template"
 import DefaultTemplate from "../templates/default-template"
-import ErrorTemplate from "../templates/error-template"
+import ErrorTemplate from "../templates/Error-template"
 
 const Page = props => {
   const { data } = props
