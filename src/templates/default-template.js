@@ -7,11 +7,13 @@ const DefaultTemplate = contentfulPage => {
 
   return (
     <div class="home-wrapper">
-      <GatsbyImage
-        image={image}
-        alt={contentfulPage.title}
-        class="hero-image"
-      ></GatsbyImage>
+      <div class="hero-image-wrapper">
+        <GatsbyImage
+          image={image}
+          alt={contentfulPage.title}
+          class="hero-image"
+        ></GatsbyImage>
+      </div>
 
       {/* HERO TEXT CONTENT */}
       <div class="hero-text">

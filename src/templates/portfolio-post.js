@@ -1,18 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 
 const PortfolioPost = ({ data }) => {
   const post = data.contentfulPortfolioPost
+  const image = getImage(post.heroImage)
 
   return (
     <Layout>
-      <h1>{post.title}</h1>
-      <GatsbyImage
-        alt={post.title}
-        image={post.heroImage.gatsbyImage}
-      ></GatsbyImage>
+      <h2>{post.title}</h2>
+      <GatsbyImage image={image} alt={post.title}></GatsbyImage>
       <p>{post.description.description}</p>
     </Layout>
   )
@@ -26,7 +24,7 @@ export const query = graphql`
         description
       }
       heroImage {
-        gatsbyImageData
+        gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
       }
     }
   }

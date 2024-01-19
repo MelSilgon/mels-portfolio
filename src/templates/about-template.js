@@ -1,33 +1,28 @@
 import React from "react"
 import RichTextRender from "../components/richtextRender"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
-import useSocials from "../hooks/useSocials"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const AboutTemplate = contentfulPage => {
-  const socials = useSocials()
   const image = getImage(contentfulPage.image)
 
   return (
-    <>
-      <h2>{contentfulPage.title}</h2>
-      {/* description.raw text gets rendered here*/}
-      <RichTextRender richTextNode={contentfulPage.description} />
+    <div class="grid-wrapper-right">
+      <div class="hero-image-right">
+        <GatsbyImage
+          image={image}
+          alt={contentfulPage.title}
+          class="hero-image-about"
+        ></GatsbyImage>
+      </div>
 
-      <GatsbyImage image={image} alt={contentfulPage.title}></GatsbyImage>
-      <p>Socials</p>
-      <ul>
-        {socials.map(edge => {
-          return (
-            <li key={edge.node.id}>
-              <p>
-                {edge.node.icon}
-                {edge.node.name}
-              </p>
-            </li>
-          )
-        })}
-      </ul>
-    </>
+      {/* HERO TEXT CONTENT */}
+      <div class="hero-text-left">
+        <h2>{contentfulPage.title}</h2>
+        <p>
+          <RichTextRender richTextNode={contentfulPage.description} />
+        </p>
+      </div>
+    </div>
   )
 }
 

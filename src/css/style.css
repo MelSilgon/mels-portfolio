@@ -19,7 +19,7 @@ a {
 
 a:hover,
 a:active {
-  color: #1a3964;
+  color: #030b2a;
 }
 
 h1,
@@ -68,23 +68,34 @@ textarea {
   min-height: 100vh;
 }
 
-/* HEADER */
+/* HEADER & FOOTER*/
 
 .navbar-container {
-  background-color: #bbf0df;
+  background-color: #6af5da;
   display: flex;
   width: 100%;
-  padding: 0.5rem 2rem;
+  padding: 2vh 4vw;
 }
 
 .nav-items {
   width: 100%;
 }
 
+.nav-item {
+  padding-right: 1rem;
+  font-weight: 600;
+}
+
 footer {
   padding: 1rem;
   color: aliceblue;
   background-color: #262929;
+}
+
+/* MAIN */
+
+main {
+  flex: 1;
 }
 
 .home-wrapper {
@@ -103,17 +114,83 @@ footer {
   }
 }
 
-.hero-image-home {
-  grid-area: heroimage;
-  justify-self: end;
+.hero-image {
+  max-height: 450;
+  max-width: 450;
 }
 
-.hero-image {
-  max-height: 500;
-  max-width: 500;
+.hero-image-wrapper {
+  padding-top: 5vh;
+  grid-area: heroimage;
+  justify-self: end;
 }
 
 .hero-text {
   grid-area: herotext;
   align-self: center;
+}
+
+/* about */
+
+.grid-wrapper-right {
+  display: grid;
+  min-height: 100%;
+  grid-gap: 5vw;
+  grid-template-areas:
+    "heroimager"
+    "herotext";
+}
+
+@media (min-width: 768px) {
+  .grid-wrapper-right {
+    grid-template-areas: "heroimager herotextl";
+  }
+}
+
+.hero-image-right {
+  grid-area: heroimager;
+}
+
+.hero-image-about {
+  max-height: 200;
+  max-width: 200;
+}
+
+.hero-text-left {
+  grid-area: herotextl;
+  align-self: center;
+}
+
+.socials-wrapper {
+  display: flex;
+
+  ul li {
+    list-style: none;
+  }
+}
+
+.icons-wrapper {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0 0.5rem;
+  }
+}
+
+.container-center {
+  padding-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-wrapper {
+  padding-top: 2rem;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
 }
